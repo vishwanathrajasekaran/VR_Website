@@ -1,0 +1,182 @@
+/* ---------------------------------------------
+   Tokens
+--------------------------------------------- */
+:root{
+  --ink:        #071B2B;   /* deep navy, from the crest */
+  --ink-2:      #0F2E44;   /* secondary navy */
+  --paper:      #EEF0EC;   /* cool paper background */
+  --paper-2:    #E4E7E1;   /* slightly deeper paper, for the footer */
+  --brass:      #A9782F;   /* muted brass accent, heraldic */
+  --brass-dim:  #8C6526;
+  --line:       #D7D9D1;   /* hairline rule */
+  --muted:      #55636A;   /* secondary text */
+
+  --serif: "Fraunces", Georgia, serif;
+  --sans:  "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --col-max: 640px;
+}
+
+*{ box-sizing: border-box; }
+
+html{ -webkit-text-size-adjust: 100%; }
+
+body{
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a{ color: inherit; text-decoration: none; }
+
+::selection{ background: var(--brass); color: var(--paper); }
+
+:focus-visible{
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------
+   Page shell
+--------------------------------------------- */
+.page{
+  max-width: var(--col-max);
+  margin: 0 auto;
+  padding: 96px 24px 48px;
+}
+
+@media (max-width: 480px){
+  .page{ padding: 64px 20px 40px; }
+}
+
+/* ---------------------------------------------
+   Hero
+--------------------------------------------- */
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: rise 700ms ease-out both;
+}
+
+@keyframes rise{
+  from{ opacity: 0; transform: translateY(8px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+.hero__mark{
+  height: 56px;
+  width: auto;
+  margin-bottom: 28px;
+}
+
+.hero__name{
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: clamp(1.9rem, 1.55rem + 1.6vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.hero__tagline{
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 46ch;
+  margin: 0 0 48px;
+}
+
+/* ---------------------------------------------
+   Directory
+--------------------------------------------- */
+.directory{
+  border-top: 1px solid var(--line);
+}
+
+.entry{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 26px 0 26px 16px;
+  border-bottom: 1px solid var(--line);
+  border-left: 2px solid transparent;
+  transition: border-left-color 220ms ease, padding-left 220ms ease, background-color 220ms ease;
+}
+
+.entry:hover,
+.entry:focus-visible{
+  border-left-color: var(--brass);
+  padding-left: 22px;
+  background-color: rgba(169, 120, 47, 0.05);
+}
+
+.entry__text{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.entry__title{
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+
+.entry__desc{
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 40ch;
+}
+
+.entry__url{
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+  color: var(--brass-dim);
+  white-space: nowrap;
+  padding-top: 4px;
+  transition: color 220ms ease;
+}
+
+.entry:hover .entry__url,
+.entry:focus-visible .entry__url{
+  color: var(--brass);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 560px){
+  .entry{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .entry__url{ padding-top: 0; }
+}
+
+/* ---------------------------------------------
+   Footer
+--------------------------------------------- */
+.footer{
+  margin-top: 56px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* ---------------------------------------------
+   Motion preference
+--------------------------------------------- */
+@media (prefers-reduced-motion: reduce){
+  .hero{ animation: none; }
+  .entry{ transition: none; }
+}
