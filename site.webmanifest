@@ -1,0 +1,11 @@
+{
+  "name": "Vishwanath Rajasekaran",
+  "short_name": "VR Hub",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EEF0EC",
+  "theme_color": "#071B2B",
+  "icons": [
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
