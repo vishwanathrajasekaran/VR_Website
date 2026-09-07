@@ -104,9 +104,28 @@ export const projects = [
 export const recommendations = [
   {
     quote:
+      "Vishwa is an enthusiastic person to work with. He had traveled with me during tough days while he had been one person stretching hands to support me always at work. Officially, a dependable resource with ownership. Always willing to come front in taking responsibilities and ensuring to close them end to end. Very good in supporting the team in their needs. Personally, a charming person to hang around with.",
+    name: "Parthiban Govindarajan",
+    role: "Regional Lead - District. · Managed Vishwa directly,
+  },
+  {
+    quote:
+      "Vishwanath has been one of the most valuable additions to the TN team, joining at a critical time when customer demand surged as schools reopened after the long COVID-induced closure. He played a pivotal role in managing customer relationships effectively, ensuring timely and complete resolutions to their issues. With a positive mindset and a proactive approach, Vishwanath not only excels in his own responsibilities but also supports his team members in achieving their goals.He is highly data-driven, consistently analyzing and utilizing data to make informed decisions. His dedication and ability to work independently, without managerial oversight, make him an exceptional asset to the team. Wishing Vishwa continued success in all his future endeavors!",
+    name: "Karthik Ponnusamy",
+    role: "AgeTech | Enabling Financial Independence For Senior Citizens | FinTech. · Managed Vishwa directly,
+  },
+  {
+    quote:
       "Vishwanath is a great pal & a fantastic person to work with, I know him since I started working in BookMyShow. He has shown a phenomenal growth as a professional and further more as a fabulous person. I have always been impressed by his dedication and efficiency towards the work. Vishwanath would be a true asset to any organization and comes with my highest recommendation.",
     name: "Shyed Baba Shaik",
-    role: "DGM – Business Development, Bigtree Entertainment Pvt. Ltd. · worked together on the same team",
+    role: "DGM - Business Development at BigTree Entertainment Pvt Limited. · worked together on the same team",
+  },
+  
+  {
+    quote:
+      "Vishwanath is a Productive Worker and Maintain good relationships with the Clients and very good Team player..",
+    name: "Arvind Kumar Kannan",
+    role: "Assistant Manager at BigTree Entertainment Pvt Limited. · worked together on the same team",
   },
   {
     quote:
@@ -125,7 +144,7 @@ export const recommendations = [
 export const experience = [
   {
     period: "Current",
-    role: "Senior Associate — Automation Engineer",
+    role: "Senior Associate — Project (Automation Test Lead)",
     org: "Cognizant",
     description:
       "Design, develop, and execute UI test automation solutions; lead a team of automation engineers. Own the CI/CD pipeline strategy for parallel test execution and consolidated reporting.",
