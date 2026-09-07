@@ -52,6 +52,19 @@ export const projects = [
     stack: ["JavaScript", "Vercel", "Google Sheets", "GitHub Actions", "Selenium"],
     url: "https://movies.vishwanathrajasekaran.in",
     repo: "https://github.com/vishwanathrajasekaran/VR_MovieDB",
+    caseStudy: {
+      problem:
+        "I wanted one place to log every movie I'd watched and rate it, instead of scattered notes — and I didn't want to hand-type details like cast, genre, or poster art for every entry.",
+      approach:
+        "A static frontend on Vercel reads from a Google Sheet acting as the database. A nightly GitHub Actions job runs a Python scraper (requests/BeautifulSoup plus headless Selenium) against IMDb and writes the enriched fields back via gspread — so adding a movie is reduced to three fields: IMDb ID, my rating, and the date watched. Everything else fills in overnight.",
+      challenges: [
+        "The Google Sheets API key was hitting a 403 from a referrer restriction when called directly from the browser — fixed by routing reads through a Vercel serverless function so the key never reaches client-side code.",
+        "The service worker was serving stale /api/ responses after data updates — fixed the caching logic and bumped the cache version to force a clean refetch.",
+        "Cut the manual \"Add Title\" flow down to just three required fields, letting the nightly scraper backfill the rest instead of me typing it all in up front.",
+      ],
+      outcome:
+        "A single automated ledger — I add a title in seconds on my phone, and the pipeline fills in the details by morning. It's also a working example of a serverless-proxy + scheduled-scraper pattern I've reused since.",
+    },
   },
   {
     name: "VR Books Dashboard",
@@ -82,6 +95,30 @@ export const projects = [
     stack: ["React", "Vite", "React Router"],
     url: "https://ui-playground.vishwanathrajasekaran.in",
     repo: null,
+  },
+];
+
+// LinkedIn recommendations. Add entries as { quote, name, role } — leave
+// empty and the section stays hidden. `role` is how they knew you /
+// their title, exactly as shown under their name on LinkedIn.
+export const recommendations = [
+  {
+    quote:
+      "Vishwanath is a great pal & a fantastic person to work with, I know him since I started working in BookMyShow. He has shown a phenomenal growth as a professional and further more as a fabulous person. I have always been impressed by his dedication and efficiency towards the work. Vishwanath would be a true asset to any organization and comes with my highest recommendation.",
+    name: "Shyed Baba Shaik",
+    role: "DGM – Business Development, Bigtree Entertainment Pvt. Ltd. · worked together on the same team",
+  },
+  {
+    quote:
+      "Vishwa is the best resource a team can have, his commitment to work is of the next level. His in-depth knowledge of the industry is terrific. He is a kind of person who teaches you and at the same time learns from you.",
+    name: "Swamy V Manickavel",
+    role: "Marketing Professional, Retail & E-commerce · worked together on the same team",
+  },
+  {
+    quote:
+      "Vishwanath is one of the most passionate quick learners I have seen. Logical skills seem to be amazing and proven worth. Hard worker, learner. All the very best, Vishwanath.",
+    name: "Priyanka Ganesan",
+    role: "Scrum Master | Project Manager, PSM I · studied together",
   },
 ];
 
