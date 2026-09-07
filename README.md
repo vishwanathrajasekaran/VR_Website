@@ -21,10 +21,22 @@ src/
     Projects.jsx           project list with live/building status
     Experience.jsx         career timeline
     Contact.jsx             LinkedIn/GitHub + footer
+    Recommendations.jsx    LinkedIn recommendations — hidden until data.js has entries
+  useTheme.jsx          dark/light toggle (persists to localStorage, respects OS preference)
+  useLiveCheck.js        client-side reachability ping for each project
 public/
   assets/shield.png    the crest mark
   favicon.png, apple-touch-icon.png, site.webmanifest
+  og-image.png          social preview card (1200×630) for LinkedIn/Twitter/etc. link shares
 ```
+
+## Recent additions
+
+- **Dark/light mode** — toggle button in the rail (desktop) and top strip (mobile). Persists across visits via localStorage, defaults to OS preference on first visit.
+- **Social preview image** — `index.html` now has proper `og:image`/`twitter:image` tags pointing at `/og-image.png`, so sharing the link on LinkedIn shows a real preview card instead of plain text. If you ever redo the brand look, regenerate this image to match (1200×630, PNG).
+- **Live health-check pings** — each project card pings its own URL client-side (`useLiveCheck.js`) and shows "responding" / "not responding". Note: this uses `no-cors` mode since these are cross-origin subdomains, so it can only detect network/DNS-level failures, not app-level errors like a 500 — an honest limitation, not a full uptime monitor.
+- **VR MovieDB case study** — expandable section under that project (Problem/Approach/Challenges/Outcome), pulled from `caseStudy` in `data.js`. To add a case study to another project, add the same `caseStudy: { problem, approach, challenges: [...], outcome }` shape to its entry.
+- **Recommendations section** — built and styled, but hidden (`Recommendations.jsx` returns `null`) until `recommendations` in `data.js` has entries. Add objects shaped `{ quote, name, role }`. Once populated, also add `{ id: "recommendations", label: "recs" }` to the `STAGES` array in `components/Rail.jsx` (between `projects` and `experience`) so it shows up in the nav rail.
 
 ## Editing content
 
