@@ -6,7 +6,7 @@ const STAGES = [
   { id: "about", label: "about" },
   { id: "stack", label: "stack" },
   { id: "projects", label: "projects" },
-  { id: "recommendations", label: "recs" },
+  { id: "recommendations", label: "recommendations" },
   { id: "experience", label: "experience" },
   { id: "contact", label: "contact" },
 ];
