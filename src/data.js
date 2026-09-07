@@ -1,0 +1,103 @@
+// Central content file — edit this to update site copy without touching components.
+
+export const profile = {
+  name: "Vishwanath Rajasekaran",
+  title: "Automation Engineer — evolving toward SDET",
+  location: "Coimbatore, Tamil Nadu, India",
+  github: "https://github.com/vishwanathrajasekaran",
+  githubHandle: "vishwanathrajasekaran",
+  linkedin: "https://www.linkedin.com/in/vishwanathrajasekaran/",
+  tagline: "Build. Automate. Break. Learn. Improve.",
+};
+
+export const about = {
+  paragraphs: [
+    "I design, develop, and execute UI test automation solutions as a Senior Associate at Cognizant, leading a team of automation engineers. My day-to-day stack is C#, Selenium WebDriver, NUnit, and hybrid data-driven frameworks — I've scripted and executed 600+ test cases and built CI/CD pipelines that run 1,000+ tests in parallel using YAML matrix strategies, along with tooling that consolidates batch-wise Extent Reports into a single, shareable HTML report.",
+    "I'm currently pursuing SDET as the next step — pushing beyond test execution into framework design, test architecture, CI/CD, and quality engineering as a discipline.",
+    "Before automation, I spent 10+ years in delivery management, operations, stakeholder management, business development, and team leadership across the Entertainment and Edu-Tech sectors. That background is why I care about not just whether a test passes, but why the thing being tested matters to the business.",
+    "On weekends, GitHub is my playground. I build personal projects to learn by shipping — end to end, using AI-assisted workflows to move from idea to a live, working system.",
+  ],
+};
+
+export const skillGroups = [
+  {
+    category: "Automation stack",
+    tags: ["C#", "Selenium WebDriver", "NUnit", "Hybrid data-driven frameworks"],
+  },
+  {
+    category: "CI/CD & execution",
+    tags: ["YAML pipelines", "Matrix parallel execution (1,000+ tests)", "GitHub Actions"],
+  },
+  {
+    category: "Reporting",
+    tags: ["Extent Reports", "Batch-wise report consolidation"],
+  },
+  {
+    category: "AI-assisted engineering",
+    tags: ["Claude-assisted app builds", "AI-assisted scripting & debugging", "Prompt-driven scaffolding"],
+  },
+  {
+    category: "Exploring next",
+    tags: ["Playwright", "Test architecture", "Quality engineering", "SDET practices"],
+  },
+];
+
+export const projects = [
+  {
+    name: "VR MovieDB",
+    status: "live",
+    statusLabel: "Live",
+    description:
+      "A personal movie database and rating ledger, backed by Google Sheets, with a nightly GitHub Actions pipeline that scrapes IMDb for new data.",
+    stack: ["JavaScript", "Vercel", "Google Sheets", "GitHub Actions", "Selenium"],
+    url: "https://movies.vishwanathrajasekaran.in",
+    repo: "https://github.com/vishwanathrajasekaran/VR_MovieDB",
+  },
+  {
+    name: "VR Books Dashboard",
+    status: "live",
+    statusLabel: "Live",
+    description:
+      "A reading tracker with genre/format/language breakdowns, streak tracking, and a Google Apps Script-backed log for daily entries.",
+    stack: ["React", "Vite", "Google Apps Script", "Google Sheets"],
+    url: "https://reading.vishwanathrajasekaran.in",
+    repo: "https://github.com/vishwanathrajasekaran/VR_Books_Dashboard",
+  },
+  {
+    name: "Home Console",
+    status: "live",
+    statusLabel: "Live",
+    description:
+      "A household task and notification tracker built for the family — PIN-based logins for each member, and push notifications run off a GitHub Actions cron.",
+    stack: ["React", "Vite", "Google Apps Script", "Web Push", "PWA"],
+    url: "https://home.vishwanathrajasekaran.in",
+    repo: null,
+  },
+  {
+    name: "UI Automation Playground",
+    status: "building",
+    statusLabel: "In progress",
+    description:
+      "A growing catalog of UI elements and real-world scenarios — forms, tables, popups, dynamic and unstable elements — built as a practice ground for Selenium, Playwright, and Cypress automation.",
+    stack: ["React", "Vite", "React Router"],
+    url: "https://ui-playground.vishwanathrajasekaran.in",
+    repo: null,
+  },
+];
+
+export const experience = [
+  {
+    period: "Current",
+    role: "Senior Associate — Automation Engineer",
+    org: "Cognizant",
+    description:
+      "Design, develop, and execute UI test automation solutions; lead a team of automation engineers. Own the CI/CD pipeline strategy for parallel test execution and consolidated reporting.",
+  },
+  {
+    period: "10+ years prior",
+    role: "Delivery Management, Operations & Team Leadership",
+    org: "Entertainment & Edu-Tech sectors",
+    description:
+      "Delivery management, operations, stakeholder management, and business development — the foundation for understanding why a solution matters to the business, not just how to build or test it.",
+  },
+];
